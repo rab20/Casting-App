@@ -1,0 +1,962 @@
+{
+	"info": {
+		"_postman_id": "a8c9f7ad-2303-4fdf-aaa1-bca1d69f45d3",
+		"name": "Casting Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "Add an actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDI1NTA2NjA0NDgwMzIwMTYwMSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3MzMzMTIsImV4cCI6MTYyNzc0MDUxMiwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJkZWxldGU6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6YXNzaWdubWVudHMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6YXNzaWdubWVudHMiLCJwb3N0Om1vdmllcyJdfQ.hVLHRCpFTYTHulOX9b9g1g7IL6FabXQ7p5oJ88lQjAKPkIWVYlwTYfJhBxfdgmleePhcLdGZ2iUMqCSUFjqFKWeNUerh4d4oQi_FxBls4yNwAsFYcTm17QSAq-wUdHfaQaMOpmP8DFbquCtt-XBVCYqhGrctTPQtMKesErNoG7x7NzsAKsWpY9awTYX_q7DlYZALVHe67GH_7cWxM7UepxfV6ERyBKthQS6dQvWNm0xndndt6x49QMsazRktP4Xi63q2H4zlftW89cyFs6OfWbspDOj8YyBOilGpFgYU3ieMFTfg_vwQqMKG6qWhuZTkpIVA9N_eA-uPs5vuo2bx8A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Actor16\",\r\n    \"age\": 22,\r\n    \"gender\": \"Female\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add an actor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Actor16\",\r\n    \"age\": 22,\r\n    \"gender\": \"Female\"\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/actors",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 13:59:45 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actor\": [\n        {\n            \"age\": 22,\n            \"gender\": \"Female\",\n            \"id\": 16,\n            \"name\": \"Actor16\"\n        }\n    ],\n    \"created\": 16,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update an actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDI1NTA2NjA0NDgwMzIwMTYwMSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3NTUwMzgsImV4cCI6MTYyNzg0MTQzOCwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJkZWxldGU6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6YXNzaWdubWVudHMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6YXNzaWdubWVudHMiLCJwb3N0Om1vdmllcyJdfQ.ATVMqntbq2Xb5H1zTaGJlfFTUBlZJzAa13GBEaBhx79o71_x5amB5vsIdzoOUZnRzQQxQU117zDonKPkfFhNv9QwT2rwEmaEv9kA4uU1Who5FMSdLacMWEp3krpSxFQfFfBFRmuTMUWX7MAK6OGwdBlpBOvOBVTuhSTizrNa__mf4etSyuOXq4BzGDXoqytLxCTpUkH72jf-80Au_teJR59ffmF_a5ISfgACxglrjflNsH1ZX_zoMQ1XKbACaPSOlLjAp_Rq3ueJWxVWgmzjY9U1EbyLNd3vZP8NQ9Y8MKPPRKKOvOckDE6llqu-3_1kH-OPvXu3kO1zfXh-roSJMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dwayne Johnson\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors/20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"20"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update an actor",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dwayne Johnson\"\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/actors/20",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actors",
+										"20"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 18:11:58 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"actor\": [\n        {\n            \"age\": 22,\n            \"gender\": \"Female\",\n            \"id\": 20,\n            \"name\": \"Dwayne Johnson\"\n        }\n    ],\n    \"success\": true,\n    \"updated\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDI1NTA2NjA0NDgwMzIwMTYwMSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3NTUwMzgsImV4cCI6MTYyNzg0MTQzOCwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJkZWxldGU6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6YXNzaWdubWVudHMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6YXNzaWdubWVudHMiLCJwb3N0Om1vdmllcyJdfQ.ATVMqntbq2Xb5H1zTaGJlfFTUBlZJzAa13GBEaBhx79o71_x5amB5vsIdzoOUZnRzQQxQU117zDonKPkfFhNv9QwT2rwEmaEv9kA4uU1Who5FMSdLacMWEp3krpSxFQfFfBFRmuTMUWX7MAK6OGwdBlpBOvOBVTuhSTizrNa__mf4etSyuOXq4BzGDXoqytLxCTpUkH72jf-80Au_teJR59ffmF_a5ISfgACxglrjflNsH1ZX_zoMQ1XKbACaPSOlLjAp_Rq3ueJWxVWgmzjY9U1EbyLNd3vZP8NQ9Y8MKPPRKKOvOckDE6llqu-3_1kH-OPvXu3kO1zfXh-roSJMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Jumanji\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update a movie",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Jumanji\"\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/movies/7",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"movies",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "167"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 18:16:35 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": [\n        {\n            \"id\": 7,\n            \"release_date\": \"Thu, 12 Dec 2024 00:00:00 GMT\",\n            \"title\": \"Jumanji\"\n        }\n    ],\n    \"success\": true,\n    \"updated\": 7\n}"
+						}
+					]
+				},
+				{
+					"name": "Update an assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDI1NTA2NjA0NDgwMzIwMTYwMSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3NTUwMzgsImV4cCI6MTYyNzg0MTQzOCwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJkZWxldGU6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6YXNzaWdubWVudHMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6YXNzaWdubWVudHMiLCJwb3N0Om1vdmllcyJdfQ.ATVMqntbq2Xb5H1zTaGJlfFTUBlZJzAa13GBEaBhx79o71_x5amB5vsIdzoOUZnRzQQxQU117zDonKPkfFhNv9QwT2rwEmaEv9kA4uU1Who5FMSdLacMWEp3krpSxFQfFfBFRmuTMUWX7MAK6OGwdBlpBOvOBVTuhSTizrNa__mf4etSyuOXq4BzGDXoqytLxCTpUkH72jf-80Au_teJR59ffmF_a5ISfgACxglrjflNsH1ZX_zoMQ1XKbACaPSOlLjAp_Rq3ueJWxVWgmzjY9U1EbyLNd3vZP8NQ9Y8MKPPRKKOvOckDE6llqu-3_1kH-OPvXu3kO1zfXh-roSJMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actor_id\": 4,\r\n    \"movie_id\": 4\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/assignments/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"assignments",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update an assignment",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"actor_id\": 4,\r\n    \"movie_id\": 4\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/assignments/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"assignments",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 18:21:58 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": [\n        {\n            \"actor_id\": 4,\n            \"actor_name\": \"Actor4\",\n            \"id\": 3,\n            \"movie_id\": 4,\n            \"movie_title\": \"NewMovie\"\n        }\n    ],\n    \"success\": true,\n    \"updated\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Movie7\",\r\n    \"release_date\": \"2024-12-12\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Movie7\",\r\n    \"release_date\": \"2024-12-12\"\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/movies",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 17:52:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created\": 7,\n    \"movie\": [\n        {\n            \"id\": 7,\n            \"release_date\": \"Thu, 12 Dec 2024 00:00:00 GMT\",\n            \"title\": \"Movie7\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Add an assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie_id\": 4,\r\n    \"actor_id\": 4\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/assignments",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"assignments"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add an assignment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"movie_id\": 4,\r\n    \"actor_id\": 4\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/assignments",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"assignments"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 17:57:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"assignment\": [\n        {\n            \"actor_id\": 4,\n            \"actor_name\": \"Actor4\",\n            \"id\": 3,\n            \"movie_id\": 4,\n            \"movie_title\": \"NewMovie\"\n        }\n    ],\n    \"created\": 3,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a movie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"9"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a movie",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/movies/9",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"movies",
+										"9"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1164"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 15:17:01 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"deleted\": 9,\n    \"movies\": [\n        {\n            \"id\": 1,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie1\"\n        },\n        {\n            \"id\": 2,\n            \"release_date\": \"Fri, 01 Oct 2021 00:00:00 GMT\",\n            \"title\": \"Movie2\"\n        },\n        {\n            \"id\": 3,\n            \"release_date\": \"Thu, 12 Dec 2024 00:00:00 GMT\",\n            \"title\": \"Movie3\"\n        },\n        {\n            \"id\": 4,\n            \"release_date\": \"Thu, 12 Dec 2024 00:00:00 GMT\",\n            \"title\": \"NewMovie\"\n        },\n        {\n            \"id\": 5,\n            \"release_date\": \"Thu, 12 Dec 2024 00:00:00 GMT\",\n            \"title\": \"Titanic\"\n        },\n        {\n            \"id\": 6,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie6\"\n        },\n        {\n            \"id\": 7,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie7\"\n        },\n        {\n            \"id\": 8,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie8\"\n        },\n        {\n            \"id\": 11,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie11\"\n        },\n        {\n            \"id\": 12,\n            \"release_date\": \"Sat, 01 Jan 2022 00:00:00 GMT\",\n            \"title\": \"Movie12\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDI1NTA2NjA0NDgwMzIwMTYwMSIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3NTUwMzgsImV4cCI6MTYyNzg0MTQzOCwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJkZWxldGU6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6YXNzaWdubWVudHMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6YXNzaWdubWVudHMiLCJwb3N0Om1vdmllcyJdfQ.ATVMqntbq2Xb5H1zTaGJlfFTUBlZJzAa13GBEaBhx79o71_x5amB5vsIdzoOUZnRzQQxQU117zDonKPkfFhNv9QwT2rwEmaEv9kA4uU1Who5FMSdLacMWEp3krpSxFQfFfBFRmuTMUWX7MAK6OGwdBlpBOvOBVTuhSTizrNa__mf4etSyuOXq4BzGDXoqytLxCTpUkH72jf-80Au_teJR59ffmF_a5ISfgACxglrjflNsH1ZX_zoMQ1XKbACaPSOlLjAp_Rq3ueJWxVWgmzjY9U1EbyLNd3vZP8NQ9Y8MKPPRKKOvOckDE6llqu-3_1kH-OPvXu3kO1zfXh-roSJMg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "Get Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MGZkNjdlZmQwNTY3NTAwNzBkOTVlOTUiLCJhdWQiOiJjYXN0aW5nIiwiaWF0IjoxNjI3NzMzNDgxLCJleHAiOjE2Mjc3NDA2ODEsImF6cCI6IlJ0eUFYbkd2UmNsZkJtNFk2aW5aWkF4aVJ5b3NaTjVjIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.RfkXaKj_hI1Jm432BKC-t50x5OjfQFRsbO1d3EjjHPW0vUYhFblrXJnt67QL5gWe_A5Wu9xLwXqz-Lo5LQ9eEl-Q_TpuvhN7VDHDXezECMpLXKK78FVtqqHFp-663VIzaP2qedKKAV4YR8pLgv_rimlcV3GRtViqJp9rsQG7sJ18a1PpFEewljDv5SA8uBhh09ADwYWAqGn6aS-h3GmmqCULxKT0i9u5nvudGGGGSOrv3vtckiriop-e9ZO4owspAOcwTxpGAWjA1myXwUVgyO2itmMBhnwutNRWJVff3ovjqDAKFL-ehsNHoHhevG3VuPiK9poJ3xBz1Y_r9fT1YQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "Add a movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titile\": \"MovieNew01\",\r\n    \"release_date\": \"2024-12-12\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titile\": \"MovieNew01\",\r\n    \"release_date\": \"2024-12-12\"\r\n}"
+								},
+								"url": {
+									"raw": "{{host}}/movies",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type,Authorization,true"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.0.1 Python/3.9.6"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 31 Jul 2021 14:04:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"unauthorized\",\n    \"message\": \"Permission not found.\",\n    \"success\": false\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZhazhHYmMzR3l0cERaRjB3M0d3OCJ9.eyJpc3MiOiJodHRwczovL2JoYXJhdC1mc25kLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNjUzNzIxMDI5ODY2NDk2NTg5NyIsImF1ZCI6ImNhc3RpbmciLCJpYXQiOjE2Mjc3MzM1OTYsImV4cCI6MTYyNzc0MDc5NiwiYXpwIjoiUnR5QVhuR3ZSY2xmQm00WTZpblpaQXhpUnlvc1pONWMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6YXNzaWdubWVudHMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDphc3NpZ25tZW50cyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDphc3NpZ25tZW50cyJdfQ.ezagEsCo_CKnx-_Gw7au85p9kJaqAlmOMb1YOLHTJf4Xp-sDNYYtXrKqpieA5oPj0W7tgrsQUWX0QRA0KP5mUO0urNHnvlbLtbQi-zWDyi3-KDj8NsXZhCbKyRrWoepdJCTjRIGz99mzCl7-vjMN4uSIRoCw2LRRsDAWVhXZt9Nb7ZcGUou9_g3b8iz-0cDD4KW-ZkEGS0mJ_-WWGuw6maITwe6PxeVjGqzgm4r90NgGgWike0eFDOxBqpqXGC9nXYgcVVj31ctY3PTkH3mZJbAZUNg38j8q1Y1VhxEqc5C1Zp7XhFHhY8SK862o_ex9E2jUGw7QBjvg5chVJHU93g",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:5000"
+		}
+	]
+}
