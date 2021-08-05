@@ -67,7 +67,7 @@ Environment variables needed: (setup.sh)
 ```bash
 export AUTH0_DOMAIN="xxxxxxxxxx.auth0.com" # Choose your tenant domain
 export ALGORITHMS="RS256"
-export API_AUDIENCE="capstone" # Create an API in Auth0
+export API_AUDIENCE="casting" # Create an API in Auth0
 
 ```
 
