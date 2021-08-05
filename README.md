@@ -1,8 +1,10 @@
 # Casting Agency - Udacity Capstone Project
-The application can be used to view, add, delete, modify the below entities:
+The Casting Agency Project models a company that is responsible for managing actors, creating movies and assigning actors to those movies. The application can be used to view, add, delete, modify the below entities:
 - Actors - Contains Actor name, age and gender
 - Movies - Contains Movie title and release date
 - Assignments - Assign actors to movies.
+
+Application URL - https://rab-casting-app.herokuapp.com/actors
 
 ## Getting Started
 
@@ -56,6 +58,52 @@ flask run --reload
 ```
 
 The `--reload` flag will detect file changes and restart the server automatically.
+
+## Auth0 setup
+You need to setup an Auth0 account.
+
+Environment variables needed: (setup.sh)
+
+```bash
+export AUTH0_DOMAIN="xxxxxxxxxx.auth0.com" # Choose your tenant domain
+export ALGORITHMS="RS256"
+export API_AUDIENCE="capstone" # Create an API in Auth0
+
+```
+
+
+### Roles
+Below are the roles and their access levels
+```
+- Casting Assistant - Can view actors, movies and assignments
+- Casting Director - Can view/modify movies and view/add/modify/delete actors and view/add/modify/delete assignments
+- Executive Producer - Can view/add/modify/delete movies, actors and assignments
+```
+
+### Permissions
+Following permissions should be created under created API settings.
+
+```bash
+view:actors
+view:movies
+view:assignments
+post:actors
+post:movies
+post:assignments
+delete:actors
+delete:movies
+delete:assignments
+update:actors
+update:movies
+update:assignments
+
+```
+
+### JWT Token
+JWT Token can be created using the below URL.
+```bash
+https://YOUR_DOMAIN/authorize?audience=API_IDENTIFIER&scope=SCOPE&response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=https://YOUR_APP/callback&state=STATE
+```
 
 ## API Endpoints
 ```
@@ -312,14 +360,6 @@ PATCH '/assignments/${assignment_id}'
 }
 ```
 
-```
-
-## Roles
-Below are the roles and their access levels
-```
-- Casting Assistant - Can view actors, movies and assignments
-- Casting Director - Can view/modify movies and view/add/modify/delete actors and view/add/modify/delete assignments
-- Executive Producer - Can view/add/modify/delete movies, actors and assignments
 ```
 
 ## Testing
