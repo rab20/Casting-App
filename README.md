@@ -360,12 +360,9 @@ PATCH '/assignments/${assignment_id}'
 }
 ```
 
-```
-
 ## Testing
 Testcases can be referred from below -  
 ```
 - Using Postman - Casting Agency.postman_collection.json
 - Using Unittest - test_app.py - Update the JWTs
 ```
-# Casting-app
