@@ -8,7 +8,8 @@ from sqlalchemy.sql.schema import ForeignKey
 from flask_migrate import Migrate
 from sqlalchemy.sql.sqltypes import Date, DateTime
 
-database_path = os.environ['DATABASE_URL']
+# database_path = os.environ['DATABASE_URL']
+database_path = os.environ.get('DATABASE_URL').replace("://", "ql://", 1)
 # database_name = "castingdb"
 # database_path = "postgresql://{}:{}@{}/{}".format('postgres', 'postgres','localhost:5432', database_name)
 
